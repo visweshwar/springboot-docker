@@ -1,12 +1,12 @@
-#Build Project
+# Build Project
 To build the project just run
 
 ./gradlew build
 
-##Create Docker Image
+## Create Docker Image
 ./gradlew docker
 
-##Check Docker Image
+## Check Docker Image
 docker images
 
 ```$xslt
@@ -15,7 +15,7 @@ REPOSITORY                                    TAG                 IMAGE ID      
 com.vis/springboot                            latest              78f1354a2fb4        2 weeks ago         119 MB
 ```
 
-##Run Docker image locally
+## Run Docker image locally
 ```$xslt
 docker run -p 8080:8080 -t com.vis/springboot
 ```
@@ -26,20 +26,20 @@ You can validate this against localhost:8080
 Hello Docker World
 ```
 
-##Pushing the docker image
+## Pushing the docker image
 Now we need a repository to push this into. We can use Pivotal/AWS/Google containers.
 
 Let's use google container.
 
-#Google Cloud
+# Google Cloud
 
 Create a project in Google cloud through console or command line.
 I just chose google Console
 
-##Install Google SDK (onetime)
+## Install Google SDK (onetime)
 This is to get command line access to gcloud
 
-##Enable APIs
+## Enable APIs
 Enable 2 APIs
  
  **Container Registry API** <br/>
@@ -51,7 +51,7 @@ Enable 2 APIs
 docker tag vis.com/springboot-docker gcr.io/springboot-docker/springboot
 ```
 
-###(One time)Enable Gcloud Docker
+### (One time)Enable Gcloud Docker
 https://cloud.google.com/container-registry/docs/advanced-authentication
 
 ```$xslt
@@ -66,7 +66,7 @@ Push the image
 docker  push gcr.io/springboot-docker/springboot
 ```
 
-##Create Cluster
+## Create Cluster
 https://cloud.google.com/kubernetes-engine/docs/quickstart
 onetime. `gcloud components install kubectl`
 
