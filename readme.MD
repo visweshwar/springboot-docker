@@ -65,7 +65,7 @@ docker-credential-gcr configure-docker
 Push the image
 
 ```$xslt
-gcloud docker — push gcr.io/your-project-id/<project-id>/<sample-image-name>:<tag>
+docker — push gcr.io/your-project-id/<project-id>/<sample-image-name>:<tag>
 
 docker  push gcr.io/springboot-docker/springboot
 ```
