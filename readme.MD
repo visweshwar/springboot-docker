@@ -48,6 +48,8 @@ Enable 2 APIs
  ##Push the docker Image to Google Cloud Container Registry
  First Create a tag 
  ```$xslt
+ docker tag <user-name>/<sample-image-name> gcr.io/<project-id>/<sample-image-name>:<tag>
+ 
 docker tag vis.com/springboot-docker gcr.io/springboot-docker/springboot
 ```
 
@@ -63,6 +65,8 @@ docker-credential-gcr configure-docker
 Push the image
 
 ```$xslt
+gcloud docker — push gcr.io/your-project-id/<project-id>/<sample-image-name>:<tag>
+
 docker  push gcr.io/springboot-docker/springboot
 ```
 
